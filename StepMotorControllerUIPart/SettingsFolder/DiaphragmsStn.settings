@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StepMotorControllerUIPart.Settings" GeneratedClassName="Diaphragms">
+  <Profiles />
+  <Settings>
+    <Setting Name="D1" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.053</Value>
+    </Setting>
+    <Setting Name="D2" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.053</Value>
+    </Setting>
+    <Setting Name="D3" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.095</Value>
+    </Setting>
+    <Setting Name="D4" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.095</Value>
+    </Setting>
+    <Setting Name="D5" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D6" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D7" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D8" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D9" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D10" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D11" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D12" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D13" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D14" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D15" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D16" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D17" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D18" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D19" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+    <Setting Name="D20" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.188</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
