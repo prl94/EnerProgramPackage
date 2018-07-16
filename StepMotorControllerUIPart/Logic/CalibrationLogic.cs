@@ -24,11 +24,11 @@ namespace StepMotorControllerUIPart.Logic
             bool failed = true;
             var calibrationProgress = new CalibrationProgress();
 
-            IModBus adc = new ModBus(connectionParams.ModBusComPort);
-            IArduino arduino = new Arduino(connectionParams.ArduinoComPort);
+          //  IModBus adc = new ModBus(connectionParams.ModBusComPort);
+          //  IArduino arduino = new Arduino(connectionParams.ArduinoComPort);
 
-            // IModBus adc = new ModBusTest();
-             //IArduino arduino = new ArduinoTest();
+             IModBus adc = new ModBusTest();
+             IArduino arduino = new ArduinoTest();
 
             adc.Connect();
             arduino.Connect();
@@ -91,11 +91,11 @@ namespace StepMotorControllerUIPart.Logic
 
         public static void CalibrateZeros(MesureParams mesureParams, ConnectionParams connectionParams, BackgroundWorker watcherWorker)
         {
-             IModBus adc = new ModBus(connectionParams.ModBusComPort);
-             IArduino arduino = new Arduino(connectionParams.ArduinoComPort);
+           //  IModBus adc = new ModBus(connectionParams.ModBusComPort);
+           //  IArduino arduino = new Arduino(connectionParams.ArduinoComPort);
 
-           //  IModBus adc = new ModBusTest();
-           //  IArduino arduino = new ArduinoTest();
+             IModBus adc = new ModBusTest();
+             IArduino arduino = new ArduinoTest();
 
             adc.Connect();
             arduino.Connect();

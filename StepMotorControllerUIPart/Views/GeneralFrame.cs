@@ -217,6 +217,7 @@ namespace StepMotorControllerUIPart.View
             double b = ln.b;
             R = Math.Abs(Math.Round(b / a, 4));
 
+            labelR.Text = R.ToString();
             // y = a*x + b 
 
             double x1 = 0;
@@ -636,8 +637,8 @@ namespace StepMotorControllerUIPart.View
 
         private void mesureBackgroundWorker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            _mesures = GeneralLogic.StartMesures(_mesureParameters, _connectionParams, _resistors, _diaphragms, _zeroDeviation, mesureBackgroundWorker);
-           // _mesures = GeneralLogic.TestMesures1();
+           // _mesures = GeneralLogic.StartMesures(_mesureParameters, _connectionParams, _resistors, _diaphragms, _zeroDeviation, mesureBackgroundWorker);
+            _mesures = GeneralLogic.TestMesures();
             WritingToFile.WriteMesureToFile(_mesures);
 
            // var pointPairList = GraphLogic.GetTDataForGraph(mesures);
@@ -646,13 +647,13 @@ namespace StepMotorControllerUIPart.View
 
            
 
-            DrawLineGraph(pointPairList, new GraphParams("U_Diaphragm/U_SEM", "Diaphragm", "U_Diaphragm/U_SEM", 0.03, 0.05));
+            DrawLineGraph(pointPairList, new GraphParams("Відношення напруги на поглиначах до МВЕ", "D", "U_D/U_SEM", 0.03, 0.05));
         }
     
         private void button2_Click(object sender, EventArgs e)
         {
              var pointPairList = GraphLogic.GetTDataForGraph(_mesures);
-            DrawLineGraph(pointPairList, new GraphParams("T(D)", "T", "D", 0.03, 0.05));
+            DrawLineGraph(pointPairList, new GraphParams("T(D)", "D", "T", 0.03, 0.05));
             ShowMessageBox("виберіть лінійний участок");
 
         }
@@ -679,6 +680,11 @@ namespace StepMotorControllerUIPart.View
         {
             var semEnergy = GraphLogic.GetSEMEnergyArray(_mesures);
             initSEMChart(semEnergy);
+        }
+
+        private void SEMChart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -68,6 +68,8 @@
             this.showSEMUbutton = new System.Windows.Forms.Button();
             this.SEMChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.SettingsTabPage = new System.Windows.Forms.TabPage();
+            this.CalibrationVoltageTextBox = new System.Windows.Forms.TextBox();
+            this.label77 = new System.Windows.Forms.Label();
             this.zSEMtextBox = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
             this.z20TextBox = new System.Windows.Forms.TextBox();
@@ -227,8 +229,8 @@
             this.calibrationBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.zeroCalibrationBackgroundWorker = new System.ComponentModel.BackgroundWorker();
             this.mesureBackgroundWorker = new System.ComponentModel.BackgroundWorker();
-            this.label77 = new System.Windows.Forms.Label();
-            this.CalibrationVoltageTextBox = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.labelR = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.generalTabPage.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -246,7 +248,7 @@
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(205, 65);
             this.startButton.TabIndex = 4;
-            this.startButton.Text = "Старт";
+            this.startButton.Text = "Почати вимір";
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
@@ -384,7 +386,7 @@
             this.calibrButton.Name = "calibrButton";
             this.calibrButton.Size = new System.Drawing.Size(205, 65);
             this.calibrButton.TabIndex = 118;
-            this.calibrButton.Text = "Калібрація";
+            this.calibrButton.Text = "Калібрація положення";
             this.calibrButton.UseVisualStyleBackColor = true;
             this.calibrButton.Click += new System.EventHandler(this.calibrButton_Click);
             // 
@@ -461,6 +463,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label78);
+            this.panel2.Controls.Add(this.labelR);
             this.panel2.Controls.Add(this.zedGraph);
             this.panel2.Controls.Add(this.tDbutton);
             this.panel2.Controls.Add(this.culculateEnergy);
@@ -493,11 +497,11 @@
             // culculateEnergy
             // 
             this.culculateEnergy.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.culculateEnergy.Location = new System.Drawing.Point(574, 450);
+            this.culculateEnergy.Location = new System.Drawing.Point(574, 443);
             this.culculateEnergy.Name = "culculateEnergy";
-            this.culculateEnergy.Size = new System.Drawing.Size(120, 35);
+            this.culculateEnergy.Size = new System.Drawing.Size(120, 42);
             this.culculateEnergy.TabIndex = 116;
-            this.culculateEnergy.Text = "Рахувати енергію";
+            this.culculateEnergy.Text = "Розрахувати енергію";
             this.culculateEnergy.UseVisualStyleBackColor = true;
             this.culculateEnergy.Click += new System.EventHandler(this.culculateEnergy_Click);
             // 
@@ -546,7 +550,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 21;
-            this.button1.Text = "Рахувати лінію";
+            this.button1.Text = "Розрахувати R";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -619,6 +623,7 @@
             this.SEMChart.Series.Add(series1);
             this.SEMChart.Size = new System.Drawing.Size(307, 381);
             this.SEMChart.TabIndex = 129;
+            this.SEMChart.Click += new System.EventHandler(this.SEMChart_Click);
             // 
             // SettingsTabPage
             // 
@@ -786,6 +791,22 @@
             this.SettingsTabPage.TabIndex = 1;
             this.SettingsTabPage.Text = "Параметри";
             this.SettingsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // CalibrationVoltageTextBox
+            // 
+            this.CalibrationVoltageTextBox.Location = new System.Drawing.Point(191, 107);
+            this.CalibrationVoltageTextBox.Name = "CalibrationVoltageTextBox";
+            this.CalibrationVoltageTextBox.Size = new System.Drawing.Size(76, 20);
+            this.CalibrationVoltageTextBox.TabIndex = 162;
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(53, 110);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(101, 13);
+            this.label77.TabIndex = 161;
+            this.label77.Text = "Напруга калібрації";
             // 
             // zSEMtextBox
             // 
@@ -2100,21 +2121,25 @@
             this.mesureBackgroundWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.mesureBackgroundWorker_DoWork);
             this.mesureBackgroundWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.mesureBackgroundWorker_ProgressChanged);
             // 
-            // label77
+            // label78
             // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(53, 110);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(101, 13);
-            this.label77.TabIndex = 161;
-            this.label77.Text = "Напруга калібрації";
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label78.Location = new System.Drawing.Point(572, 391);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(38, 20);
+            this.label78.TabIndex = 129;
+            this.label78.Text = "R = ";
             // 
-            // CalibrationVoltageTextBox
+            // labelR
             // 
-            this.CalibrationVoltageTextBox.Location = new System.Drawing.Point(191, 107);
-            this.CalibrationVoltageTextBox.Name = "CalibrationVoltageTextBox";
-            this.CalibrationVoltageTextBox.Size = new System.Drawing.Size(76, 20);
-            this.CalibrationVoltageTextBox.TabIndex = 162;
+            this.labelR.AutoSize = true;
+            this.labelR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelR.Location = new System.Drawing.Point(605, 391);
+            this.labelR.Name = "labelR";
+            this.labelR.Size = new System.Drawing.Size(18, 20);
+            this.labelR.TabIndex = 130;
+            this.labelR.Text = "0";
             // 
             // GeneralView
             // 
@@ -2340,6 +2365,8 @@
         private System.Windows.Forms.Button showSEMUbutton;
         private System.Windows.Forms.TextBox CalibrationVoltageTextBox;
         private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label labelR;
     }
 }
 
